@@ -1,0 +1,202 @@
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.screen {
+    display: none;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+.logo h1 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.logo p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #4ecdc4;
+    color: white;
+}
+
+.btn-secondary {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-success {
+    background: #1dd1a1;
+    color: white;
+}
+
+.btn-warning {
+    background: #feca57;
+    color: white;
+}
+
+.btn-info {
+    background: #54a0ff;
+    color: white;
+}
+
+.btn-hint {
+    background: #ff9ff3;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Игровой экран */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.question-container {
+    margin: 30px 0;
+}
+
+#questionText {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.option-btn {
+    padding: 20px;
+    border: 3px solid #e9ecef;
+    border-radius: 15px;
+    background: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    border-color: #4ecdc4;
+    background: #f8f9fa;
+}
+
+.option-btn.correct {
+    border-color: #1dd1a1;
+    background: #d1f7e8;
+}
+
+.option-btn.incorrect {
+    border-color: #ff6b6b;
+    background: #ffeaea;
+}
+
+.option-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.game-controls {
+    margin-top: 30px;
+}
+
+/* Результаты */
+.results-content h2 {
+    color: #1dd1a1;
+    margin-bottom: 20px;
+}
+
+.final-stats {
+    font-size: 1.2em;
+    margin: 30px 0;
+}
+
+.final-stats p {
+    margin: 15px 0;
+}
+
+/* Мультиплеер */
+.multiplayer-content h2 {
+    color: #ff6b6b;
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#roomCode {
+    font-size: 2em;
+    color: #4ecdc4;
+    letter-spacing: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .options-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo h1 {
+        font-size: 2em;
+    }
+}
